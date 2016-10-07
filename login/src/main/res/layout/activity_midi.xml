@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="test.wqj.com.login.activity.MIDIActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp20"
+        android:background="#97C8CD" />
+
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="#97C8CD">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="@string/MIDI"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="#97C8CD"
+            android:src="@drawable/kc2" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/yq_scoll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp64">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <test.wqj.com.login.utils.AutoPlayingViewPager
+                android:id="@+id/auto_play_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp163">
+
+            </test.wqj.com.login.utils.AutoPlayingViewPager>
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/yq_tabs1"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:background="@android:color/white"
+                    app:tabTextColor="@color/textcolor"
+                    app:tabSelectedTextColor="@color/textcolor_checked"
+                    app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                    app:tabGravity="center"
+                    app:tabMode="scrollable"
+                    app:tabIndicatorColor="@android:color/white">
+                </android.support.design.widget.TabLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <test.wqj.com.login.utils.MyListView
+                android:id="@+id/yq_zj_scr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </test.wqj.com.login.utils.MyListView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#d1d1d1" />
+
+            <test.wqj.com.login.utils.MyListView
+                android:id="@+id/yq_name_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+            </test.wqj.com.login.utils.MyListView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp5"
+                android:background="#d1d1d1" />
+
+            <test.wqj.com.login.utils.MyGridView
+                android:id="@+id/yq_f_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="@dimen/dp150"
+                android:gravity="center"
+                android:horizontalSpacing="1dip"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dip">
+            </test.wqj.com.login.utils.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

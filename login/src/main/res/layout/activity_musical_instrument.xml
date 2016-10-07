@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_musical_instrument"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="test.wqj.com.login.activity.MusicalInstrument">
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp20"
+    android:background="#97C8CD" />
+
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="#97C8CD">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="@string/MIDI"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="#97C8CD"
+            android:src="@drawable/kc2" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/yq_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="@android:color/white"
+                app:tabTextColor="@color/textcolor"
+                app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                app:tabGravity="center"
+                app:tabSelectedTextColor="@color/textcolor_checked"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@android:color/white">
+            </android.support.design.widget.TabLayout>
+        </android.support.design.widget.AppBarLayout>
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/mu_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <test.wqj.com.login.utils.MyGridView
+                android:id="@+id/yq_grid1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="@dimen/dp150"
+                android:gravity="center"
+                android:horizontalSpacing="1dip"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dip">
+            </test.wqj.com.login.utils.MyGridView>
+        </ScrollView>
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+</RelativeLayout>

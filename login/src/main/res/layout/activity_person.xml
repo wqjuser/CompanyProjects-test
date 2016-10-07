@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity=""
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="test.wqj.com.login.activity.PersonActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+    <RadioGroup
+        android:id="@+id/main_tab_RadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/course"
+            style="@style/main_tab"
+            android:checked="true"
+            android:drawableTop="@drawable/icon_course"
+            android:text="@string/course" />
+
+        <RadioButton
+            android:id="@+id/myself"
+            style="@style/main_tab"
+            android:drawableTop="@drawable/icon_my"
+            android:text="@string/myself" />
+
+        <RadioButton
+            android:id="@+id/MIDI"
+            style="@style/main_tab"
+            android:drawableTop="@drawable/icon_midi"
+            android:text="@string/MIDI" />
+    </RadioGroup>
+
+
+</LinearLayout>

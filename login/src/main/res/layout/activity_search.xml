@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context="test.wqj.com.login.activity.SearchActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp20"
+        android:background="#97C8CD" />
+
+    <LinearLayout
+        android:id="@+id/sea_li"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="#97C8CD"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/kcButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="11dp"
+            android:background="#97C8CD"
+            android:src="@drawable/kczx_re" />
+
+        <EditText
+            android:id="@+id/search_et_input"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_weight="20"
+            android:background="@drawable/search_edittext_shape"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="6dp"
+            android:hint="关键词"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textColor="#333333"
+            android:textColorHint="#333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="11dp"
+            android:text="@string/sea_search"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sea_li"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp96"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                >
+
+                <RadioGroup
+                    android:id="@+id/sea_radioGroup"
+                    android:weightSum="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp96"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom">
+                    <RadioButton
+                        android:id="@+id/sea_radio_couse"
+                        style="@style/sea_radiobutton"
+                        android:drawableTop="@drawable/course_radiobutton_icon"
+                        android:text="@string/course"
+                        />
+                    <RadioButton
+                        android:id="@+id/sea_radio_midi"
+                        style="@style/sea_radiobutton"
+                        android:drawableTop="@drawable/midi_radiobutton_icon"
+                        android:text="@string/kc_midi"
+                        />
+                    <RadioButton
+                        android:id="@+id/sea_radio_yydd"
+                        style="@style/sea_radiobutton"
+                        android:drawableTop="@drawable/yydd_radiobutton_icon"
+                        android:text="@string/sea_yydd"
+                        />
+                    <RadioButton
+                        android:id="@+id/sea_radio_jyjl"
+                        style="@style/sea_radiobutton"
+                        android:drawableTop="@drawable/jyjl_radiobutton_icon"
+                        android:text="@string/sea_jyjl"
+                        />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_bg" />
+
+            <RelativeLayout
+                android:id="@+id/sea_re"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:layout_marginStart="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="@string/course"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_bg" />
+
+            <test.wqj.com.login.utils.MyListView
+                android:id="@+id/sea_kc_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+            </test.wqj.com.login.utils.MyListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/sea_re_dd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="@string/sea_yydd"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/sp14" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_bg" />
+
+                <TextView
+                    android:id="@+id/sea_dd_time_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="2015_06-05"
+                    android:textColor="@color/textcolor" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:background="@color/view_bg" />
+
+                <test.wqj.com.login.utils.MyListView
+                    android:id="@+id/sea_dd_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"></test.wqj.com.login.utils.MyListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#d1d1d1" />
+
+                <TextView
+                    android:id="@+id/sea_dd_time_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="2015_06-05"
+                    android:textColor="@color/textcolor" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:background="#d1d1d1" />
+
+                <test.wqj.com.login.utils.MyListView
+                    android:id="@+id/sea_dd_listview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white">
+
+                </test.wqj.com.login.utils.MyListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#d1d1d1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/sea_jyjl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="@string/sea_jyjl"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/sp14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#d1d1d1" />
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp11"
+                        android:layout_marginLeft="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp11"
+                        android:text="订单时间：2016-06-05 14:00"
+                        android:textColor="@color/sea_dd_time"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="@dimen/dp11"
+                        android:layout_marginRight="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp11"
+                        android:gravity="end"
+                        android:text="已付款"
+                        android:textColor="#f49c14"
+                        android:textSize="@dimen/sp13" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:background="#d1d1d1" />
+
+                <test.wqj.com.login.utils.MyListView
+                    android:id="@+id/sea_jyjl_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"></test.wqj.com.login.utils.MyListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:background="#d1d1d1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="@dimen/dp11"
+                    android:layout_marginRight="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp11"
+                    android:text="共1件商品（含运费0.0）实付¥ 5000.00"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/sp16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#d1d1d1" />
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp11"
+                        android:layout_marginLeft="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp11"
+                        android:text="订单时间：2016-06-05 14:00"
+                        android:textColor="@color/sea_dd_time"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="@dimen/dp11"
+                        android:layout_marginRight="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp11"
+                        android:gravity="end"
+                        android:text="未上课"
+                        android:textColor="#f49c14"
+                        android:textSize="@dimen/sp13" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:background="#d1d1d1" />
+
+                <test.wqj.com.login.utils.MyListView
+                    android:id="@+id/sea_jyjl_listview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"></test.wqj.com.login.utils.MyListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp11"
+                    android:background="#d1d1d1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="@dimen/dp11"
+                    android:layout_marginRight="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp11"
+                    android:text="实付¥ 5000.00"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/sp16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#d1d1d1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/sea_re_yq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp11"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:text="乐器"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/sp14" />
+                </RelativeLayout>
+
+                <test.wqj.com.login.utils.MyGridView
+                    android:id="@+id/sea_yq_gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="@dimen/dp150"
+                    android:gravity="center"
+                    android:horizontalSpacing="1dip"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1dip"></test.wqj.com.login.utils.MyGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

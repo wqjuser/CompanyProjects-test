@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/yq_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/nameofmidi"
+            android:textColor="@color/yq_name"
+            android:textSize="@dimen/yq_name_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/yq_money_sign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/yq_money_sign"
+                android:textColor="@color/yq_name"
+                android:textSize="@dimen/yq_money_sign" />
+
+            <TextView
+                android:id="@+id/yq_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:text="@string/yq_price"
+                android:textColor="@color/yq_name"
+                android:textSize="@dimen/yq_name_size" />
+        </LinearLayout>
+
+        <test.wqj.com.login.utils.CenterTextView
+            android:id="@+id/nameofyq_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:text="@string/yq_ms"
+            android:textColor="@color/yq_name"
+            android:textSize="@dimen/yq_describe">
+
+        </test.wqj.com.login.utils.CenterTextView>
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:id="@+id/nameofyq_horizon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yq_name_hor">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/yq_p1"
+                    android:layout_width="@dimen/yq_name_hor"
+                    android:layout_height="@dimen/yq_name_hor"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:src="@drawable/p1" />
+
+                <ImageView
+                    android:id="@+id/yq_p2"
+                    android:layout_width="@dimen/yq_name_hor"
+                    android:layout_height="@dimen/yq_name_hor"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:src="@drawable/p1" />
+
+                <ImageView
+                    android:id="@+id/yq_p3"
+                    android:layout_width="@dimen/yq_name_hor"
+                    android:layout_height="@dimen/yq_name_hor"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:src="@drawable/p1" />
+                <ImageView
+                    android:id="@+id/yq_p4"
+                android:layout_width="@dimen/yq_name_hor"
+                android:layout_height="@dimen/yq_name_hor"
+                android:layout_marginLeft="@dimen/dp40"
+                android:src="@drawable/p1" />
+                <ImageView
+                    android:id="@+id/yq_p5"
+                    android:layout_width="@dimen/yq_name_hor"
+                    android:layout_height="@dimen/yq_name_hor"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:src="@drawable/p1" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>

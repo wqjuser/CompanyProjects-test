@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="117dp"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <ImageView
+        android:background="#eeeeee"
+        android:id="@+id/kc_imb1"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="87dp"
+        android:layout_height="87dp" />
+    <TextView
+        android:id="@+id/kc_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kc_x"
+        android:layout_alignTop="@id/kc_imb1"
+        android:layout_marginLeft="109dp"
+        android:textColor="#333333"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/kc_tv3"
+        android:layout_alignLeft="@id/kc_tv1"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ls_xxx"
+        android:textColor="#999999"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/kc_tv4"
+        android:layout_alignLeft="@id/kc_tv1"
+        android:layout_alignBottom="@id/kc_imb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/xx_xx_xx"
+        android:textColor="#999999"
+        android:textSize="14sp"
+         />
+
+
+    <Button
+        android:background="@drawable/kc_button_shape"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:textSize="13sp"
+        android:textColor="#999999"
+        android:layout_marginRight="21dp"
+        android:id="@+id/kc_button"
+        android:layout_alignBottom="@+id/kc_tv4"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/kc_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        android:layout_below="@+id/kc_tv1"
+        android:layout_alignStart="@+id/kc_tv3" />
+    <View
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_alignLeft="@id/kc_imb1"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_below="@id/kc_button"
+        android:background="@color/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+</RelativeLayout>

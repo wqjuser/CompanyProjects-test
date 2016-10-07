@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="test.wqj.com.login.activity.PersonActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:background="#97C8CD"/>
+
+    <RelativeLayout
+        android:id="@+id/Ll1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#97C8CD"
+        >
+        <TextView
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/person"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:background="#97C8CD"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <ImageButton
+            android:src="@drawable/search2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/search2"
+            android:id="@+id/imageButton4"
+            android:layout_marginRight="11dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="#97C8CD"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="#97C8CD">
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:contentDescription="@null"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageButton2" />
+        <test.wqj.com.login.utils.CircularImage
+            android:id="@+id/cover_user_photo"
+            android:layout_marginLeft="11dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+             />
+
+        <TextView
+            android:text="@string/cdohng"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:text="@string/_15664821687"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView"
+            android:id="@+id/textView2" />
+
+        <ImageButton
+            android:src="@drawable/toposition3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/toposition3"
+            android:layout_marginRight="11dp"
+            android:id="@+id/imageButton3"
+            android:layout_alignParentEnd="true"
+            android:background="#97C8CD"
+
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/my_list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1px"
+        android:divider="#e6e6e6"></ListView>
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_course"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.wqj.com.login.activity.CourseActivity">
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:background="#97C8CD" />
+
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+
+        android:background="#97C8CD">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="@string/course"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/kcButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:background="#97C8CD"
+            android:src="@drawable/kc1"
+             />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:background="#97C8CD"
+            android:src="@drawable/kc3"
+             />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageButton6"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/imageButton6"
+            android:layout_alignTop="@id/imageButton6"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:background="#97C8CD"
+            android:src="@drawable/kc2"
+             />
+    </RelativeLayout>
+
+    <test.wqj.com.login.utils.AutoPlayingViewPager
+        android:id="@+id/auto_play_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="64dp">
+
+    </test.wqj.com.login.utils.AutoPlayingViewPager>
+    <ListView
+        android:divider="#dddddd"
+        android:dividerHeight="1px"
+        android:id="@+id/kc_lv"
+        android:layout_marginTop="265dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</RelativeLayout>
